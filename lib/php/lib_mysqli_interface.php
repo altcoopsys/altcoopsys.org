@@ -206,7 +206,7 @@ mysqli_interface::set('lastDatabase', '');  // remember database last in use
 mysqli_interface::set('errors', '');
 
 /* init mysql object */
-$mysqli_link = mysqli_connect(config::get("db_srv_address"), config::get("db_user"), config::get("db_pass"), config::get("db_datasource"));
+$mysqli_link = mysqli_connect(config::get("db_srv_address"), config::get("db_user"), config::get("db_pass"), config::get("db_name"));
 mysqli_interface::set('mysqli_link', $mysqli_link); // save for later reuse
 $mysqli_link->set_charset(config::get("db_charset"));
 
